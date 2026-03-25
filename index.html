@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Angel Carasas</title>
+  <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ0T8u5Ny6iPAAqzYJv-WcwUuWmVDq6SNXwg&s" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0e1a;
+      --border: rgba(99,140,255,0.15);
+      --blue: #4f7cff;
+      --blue2: #7ba3ff;
+      --text: #e8eeff;
+      --muted: #6b7a99;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 48px 20px 80px;
+    }
+
+    .page { max-width: 720px; margin: 0 auto; }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 80px; height: 80px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      background: #1a2035;
+    }
+
+    .header-text h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: 26px; font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 5px;
+      color: var(--white);
+    }
+    .header-text h1 span { color: var(--blue); }
+
+    .role { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+
+    .meta { display: flex; flex-wrap: wrap; gap: 16px; }
+    .meta span { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block; }
+
+    /* SECTIONS */
+    .section { margin-bottom: 36px; }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      color: var(--blue2); margin-bottom: 14px;
+    }
+
+    .about-text { font-size: 14px; line-height: 1.85; color: var(--muted); }
+    .about-text strong { color: var(--text); font-weight: 500; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: rgba(79,124,255,0.08);
+      color: var(--blue2);
+      border: 1px solid rgba(79,124,255,0.2);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 12px; font-weight: 500;
+    }
+
+    .stats { display: flex; gap: 40px; }
+    .stat-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 28px; font-weight: 700; color: var(--blue);
+    }
+    .stat-label { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+    .lang-item { margin-bottom: 14px; }
+    .lang-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--text); margin-bottom: 6px; }
+    .lang-row span:last-child { color: var(--muted); font-size: 12px; }
+    .bar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; max-width: 320px; }
+    .bar-fill { height: 100%; border-radius: 2px; background: var(--blue); }
+
+    .edu-item {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+    .edu-sub { font-size: 12px; color: var(--muted); }
+    .edu-year { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--blue); white-space: nowrap; margin-left: 16px; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact-row .label { font-size: 11px; color: var(--muted); margin-bottom: 3px; }
+    .contact-row .value { font-size: 13px; color: var(--text); }
+    .contact-row a { color: var(--blue2); text-decoration: none; font-size: 13px; }
+    .contact-row a:hover { text-decoration: underline; }
+
+    @media (max-width: 540px) {
+      .header { flex-direction: column; gap: 16px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ0T8u5Ny6iPAAqzYJv-WcwUuWmVDq6SNXwg&s" alt="Miguel Angel" onerror="this.style.background='#1a2035'">
+    <div class="header-text">
+      <h1>Miguel <span>Angel</span> Carasas</h1>
+      <div class="role">Estudiante de Diseño y Desarrollo de Software</div>
+      <div class="meta">
+        <span>📍 Callao, Perú</span>
+        <span>🏫 Tecsup · 5to Año</span>
+        <span><span class="dot"></span> Disponible</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Sobre mí</div>
+    <p class="about-text">
+      Estudiante de segundo año en <strong>Tecsup</strong>, Callao. Me interesa el desarrollo web y estoy aprendiendo a construir aplicaciones completas, desde el frontend hasta la base de datos. Me gusta que las cosas funcionen bien y también se vean bien. Actualmente reforzando mis conocimientos en <strong>desarrollo fullstack</strong> con Node.js y PostgreSQL.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Tecnologías</div>
+    <div class="tags">
+      <span class="tag">HTML5</span>
+      <span class="tag">CSS3</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Express.js</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">SQL</span>
+      <span class="tag">REST API</span>
+      <span class="tag">Git & GitHub</span>
+      <span class="tag">Render</span>
+      <span class="tag">VS Code</span>
+      <span class="tag">Responsive Design</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">En números</div>
+    <div class="stats">
+      <div><div class="stat-num">2+</div><div class="stat-label">Años estudiando</div></div>
+      <div><div class="stat-num">10+</div><div class="stat-label">Proyectos</div></div>
+      <div><div class="stat-num">5+</div><div class="stat-label">Tecnologías</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Idiomas</div>
+    <div class="lang-item">
+      <div class="lang-row"><span>Español</span><span>Nativo</span></div>
+      <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+    </div>
+    <div class="lang-item">
+      <div class="lang-row"><span>Inglés</span><span>Básico</span></div>
+      <div class="bar"><div class="bar-fill" style="width:35%"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Educación</div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-title">Diseño y Desarrollo de Software</div>
+        <div class="edu-sub">Instituto Tecsup · Callao, Perú</div>
+      </div>
+      <div class="edu-year">2024 – hoy</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-title">Educación Secundaria Completa</div>
+        <div class="edu-sub">Colegio · Callao, Perú</div>
+      </div>
+      <div class="edu-year">2023</div>
+    </div>
+  </div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-title">Educación Ingles</div>
+        <div class="edu-sub">Instituto - ICPNA</div>
+      </div>
+      <div class="edu-year">2024 - Estudiando</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Contacto</div>
+    <div class="contact-grid">
+      <div class="contact-row">
+        <div class="label">Email</div>
+        <div class="value">miguel.carasas@tecsup.edu.pe</div>
+      </div>
+      <div class="contact-row">
+        <div class="label">Ubicación</div>
+        <div class="value">Callao, Perú</div>
+      </div>
+      <div class="contact-row">
+        <div class="label">LinkedIn</div>
+        <a href="#">linkedin.com/in/miguelangel</a>
+      </div>
+      <div class="contact-row">
+        <div class="label">GitHub</div>
+        <a href="https://github.com/Mixuell" target="_blank">github.com/Mixuell</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
